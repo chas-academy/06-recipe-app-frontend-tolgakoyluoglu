@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to Tolgas {{ title }}!
   </h1>
 
+  <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput">
+
+  <button (click)="handleRecipes()">Get Recipe's</button>
 
   <router-outlet></router-outlet>
