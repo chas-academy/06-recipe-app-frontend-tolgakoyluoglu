@@ -8,4 +8,10 @@
 
   <button (click)="handleRecipes()">Get Recipe's</button>
 
+  <div class="wrapper">
+    <ul>
+      <li *ngFor="let recipe of recipes">{{recipe.label}}</li>
+    </ul>
+  </div>
+
   <router-outlet></router-outlet>

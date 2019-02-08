@@ -10,6 +10,7 @@ import { RecipeService } from './recipe.service';
 export class AppComponent {
   title = 'Recipe App';
   searchInput = this.searchInput;
+  recipes: [];
 
 
   constructor(private recipeService: RecipeService) { }
@@ -17,7 +18,7 @@ export class AppComponent {
 
   handleRecipes = () => {
     this.recipeService.getRecipes(this.searchInput).subscribe(data => {
-      console.log(data);
+      this.recipes = data.hits.map(hit => hit.recipe)
     })
   }
 }
