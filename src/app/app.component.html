@@ -1,19 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="wrap" style="text-align:center">
+<div style="text-align:center">
   <h1 class="title">
     {{ title }}!
   </h1>
-
-  <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput">
-
-  <button class="recipebtn" (click)="handleRecipes()">Get Recipe's</button>
-
-  <div class="wrapper">
-    <div class="card" *ngFor="let recipe of recipes">
-      <a [routerLink]=""></a>
-      <h3 class="cardtitle">{{recipe.label}}</h3>
-      <img src="{{recipe.image}}">
-    </div>
-  </div>
 
   <router-outlet></router-outlet>

@@ -7,10 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecipeResultComponent } from './recipe-result/recipe-result.component';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecipeResultComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     BrowserModule,
