@@ -1,0 +1,13 @@
+<div class="wrap">
+  <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput">
+
+  <button class="recipebtn" (click)="handleRecipes()">Get Recipe's</button>
+
+  <div class="wrapper">
+    <div class="card" *ngFor="let recipe of recipes">
+      <a [routerLink]=""></a>
+      <h3 class="cardtitle">{{recipe.label}}</h3>
+      <img src="{{recipe.image}}">
+    </div>
+  </div>
+</div>
