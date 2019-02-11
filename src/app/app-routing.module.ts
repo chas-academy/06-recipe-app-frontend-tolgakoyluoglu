@@ -5,7 +5,7 @@ import { RecipeDetailsComponent } from './recipe-details/recipe-details.componen
 
 const routes: Routes = [
   { path: '', component: RecipeResultComponent },
-  { path: './detail:label', component: RecipeDetailsComponent }
+  { path: 'detail/:label', component: RecipeDetailsComponent },
 ];
 
 @NgModule({

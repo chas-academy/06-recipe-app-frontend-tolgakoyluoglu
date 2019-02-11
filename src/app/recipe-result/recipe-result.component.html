@@ -5,9 +5,10 @@
 
   <div class="wrapper">
     <div class="card" *ngFor="let recipe of recipes">
-      <a [routerLink]=""></a>
-      <h3 class="cardtitle">{{recipe.label}}</h3>
-      <img src="{{recipe.image}}">
+      <a routerLink="detail/{{recipe.label}}">
+        <h3 class="cardtitle">{{recipe.label}}</h3>
+        <img src="{{recipe.image}}">
+      </a>
     </div>
   </div>
 </div>
