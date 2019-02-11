@@ -19,6 +19,7 @@ export class AppComponent {
   handleRecipes = () => {
     this.recipeService.getRecipes(this.searchInput).subscribe(data => {
       this.recipes = data.hits.map(hit => hit.recipe)
+      console.log(data.hits)
     })
   }
 }
