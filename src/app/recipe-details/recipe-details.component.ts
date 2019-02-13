@@ -28,4 +28,8 @@ export class RecipeDetailsComponent implements OnInit {
     this.router.navigate(['/recipes']);
   }
 
+  saveRecipe(recipeLabel: string) {
+    debugger;
+  }
+
 }

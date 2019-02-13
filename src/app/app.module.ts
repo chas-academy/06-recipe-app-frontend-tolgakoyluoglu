@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipeResultComponent } from './recipe-result/recipe-result.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { SavedComponent } from './saved/saved.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeResultComponent,
     RecipeDetailsComponent,
-    RecipesComponent
+    RecipesComponent,
+    SavedComponent
   ],
   imports: [
     BrowserModule,

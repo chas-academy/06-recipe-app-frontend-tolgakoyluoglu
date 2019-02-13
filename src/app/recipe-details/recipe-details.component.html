@@ -12,7 +12,7 @@
       <p>Health Labels:</p>
       <p><span>{{recipe[0].healthLabels}}</span></p>
 
-      <button class="add">Add to List</button>
+      <button class="add" (click)="saveRecipe(recipe.label)">Add to List</button>
       <button class="share">Share with friends</button>
     </div>
   </div>
