@@ -11,7 +11,6 @@ export class RecipeResultComponent implements OnInit {
   searchInput = this.searchInput;
   recipes: any
 
-
   constructor(private recipeService: RecipeService) { }
 
 
