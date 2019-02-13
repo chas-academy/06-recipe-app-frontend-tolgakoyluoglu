@@ -9,12 +9,14 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipeResultComponent } from './recipe-result/recipe-result.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeResultComponent,
-    RecipeDetailsComponent
+    RecipeDetailsComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,

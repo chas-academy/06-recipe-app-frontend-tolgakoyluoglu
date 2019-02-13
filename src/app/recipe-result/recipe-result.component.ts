@@ -9,7 +9,7 @@ import { RecipeService } from '../recipe.service';
 export class RecipeResultComponent implements OnInit {
 
   searchInput = this.searchInput;
-  recipes: [];
+  recipes: any
 
 
   constructor(private recipeService: RecipeService) { }
@@ -18,7 +18,7 @@ export class RecipeResultComponent implements OnInit {
   handleRecipes = () => {
     this.recipeService.getRecipes(this.searchInput).subscribe(data => {
       this.recipes = data.hits.map(hit => hit.recipe)
-      console.log(data.hits)
+      console.log(this.recipes)
     })
   }
 

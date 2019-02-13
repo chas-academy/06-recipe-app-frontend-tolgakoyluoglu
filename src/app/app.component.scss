@@ -1,4 +1,23 @@
-.title {
-  color: lightseagreen;
-  font-family: sans-serif;
+nav {
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #62a5a1;
+
+  .title {
+    color: #fff;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  a.menu {
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
 }

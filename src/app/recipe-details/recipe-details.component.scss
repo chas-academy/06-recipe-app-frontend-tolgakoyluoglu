@@ -1,0 +1,73 @@
+.detailwrap {
+  font-family: Georgia, serif;
+  color: #3d4645;
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    color: #62a5a1;
+    font-size: 1.3rem;
+  }
+
+  .carddetail {
+    width: 40%;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 50px;
+    flex: 0 26%;
+    border-color: #62a5a1;
+    border-style: double;
+    border-radius: 6px;
+
+    .recipedetail {
+      padding-bottom: 30px;
+    }
+
+    .add {
+      padding: 10px 30px;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: #62a5a1;
+      font-size: 16px;
+      border: none;
+      color: #ffff;
+      margin-right: 20px;
+      margin-top: 30px;
+    }
+
+    .share {
+      padding: 10px 30px;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: #62a5a1;
+      font-size: 16px;
+      border: none;
+      color: #ffff;
+      margin-left: 20px;
+    }
+
+    p {
+      text-align: start;
+      padding-left: 30px;
+      color: #62a5a1;
+      font-size: 1.1rem;
+
+      span {
+        color: black;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .recipebtn {
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #62a5a1;
+    font-size: 16px;
+    border: none;
+    color: #ffff
+  }
+}

@@ -1,3 +1,19 @@
-<div *ngIf="recipe">
-  <h2>Details {{label}}</h2>
+<div class="detailwrap">
+  <h2>Recipe Details</h2>
+  <button class="recipebtn" (click)="goToRecipes()">Go Back</button>
+  <div class="carddetail" *ngIf="recipe">
+    <h3 class="cardtitle">{{recipe[0].label}}</h3>
+    <img class="detailimg" alt="Image of {{recipe[0].label}}" src="{{recipe[0].image}}">
+    <div class="recipedetail">
+      <p>Ingredients:</p>
+      <p><span>{{recipe[0].ingredientLines}}</span></p>
+      <p>Total Calories:</p>
+      <p><span>{{recipe[0].calories}}</span></p>
+      <p>Health Labels:</p>
+      <p><span>{{recipe[0].healthLabels}}</span></p>
+
+      <button class="add">Add to List</button>
+      <button class="share">Share with friends</button>
+    </div>
+  </div>
 </div>

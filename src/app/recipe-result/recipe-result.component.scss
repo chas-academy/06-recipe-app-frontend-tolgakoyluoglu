@@ -1,8 +1,9 @@
 .wrap {
-  font-family: sans-serif;
+  font-family: Georgia, serif;
   margin: 0;
   padding: 0;
   font-size: 18px;
+  padding: 15px;
 
   .wrapper {
     display: flex;
@@ -14,15 +15,19 @@
   }
 
   .card {
-    background-color: #f7f7f7;
+    background-color: #fff;
     margin-top: 50px;
     flex: 0 26%;
-    border-color: #3b3b3b;
+    border-color: #62a5a1;
     border-style: double;
     border-radius: 6px;
 
     .cardtitle {
-      color: #10413e;
+      color: #62a5a1;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
@@ -37,8 +42,9 @@
     padding: 10px 30px;
     cursor: pointer;
     border-radius: 1px;
-    background-color: lightseagreen;
+    background-color: #62a5a1;
     font-size: 16px;
     border: none;
+    color: #ffff
   }
 }
