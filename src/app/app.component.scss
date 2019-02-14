@@ -1,6 +1,6 @@
 nav {
   padding: 10px;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   font-family: Georgia, serif;
   display: flex;
@@ -20,4 +20,12 @@ nav {
     text-decoration: none;
     color: #fff;
   }
+}
+
+footer {
+  height: 2rem;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: auto;
+  width: 100%;
 }

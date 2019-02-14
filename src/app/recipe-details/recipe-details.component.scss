@@ -3,12 +3,14 @@
   color: #3d4645;
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 20px;
   }
 
   h2 {
     color: #62a5a1;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 20px;
   }
 
   .carddetail {
@@ -20,9 +22,11 @@
     border-color: #62a5a1;
     border-style: double;
     border-radius: 6px;
+    padding: 5px;
 
     .recipedetail {
       padding-bottom: 30px;
+      margin: 20px;
     }
 
     .add {
@@ -30,7 +34,7 @@
       cursor: pointer;
       border-radius: 6px;
       background-color: #62a5a1;
-      font-size: 16px;
+      font-size: 0.8rem;
       border: none;
       color: #ffff;
       margin-right: 20px;
@@ -42,7 +46,7 @@
       cursor: pointer;
       border-radius: 6px;
       background-color: #62a5a1;
-      font-size: 16px;
+      font-size: 0.8rem;
       border: none;
       color: #ffff;
       margin-left: 20px;
@@ -56,7 +60,7 @@
 
       span {
         color: black;
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
     }
   }
@@ -69,5 +73,9 @@
     font-size: 16px;
     border: none;
     color: #ffff
+  }
+
+  img.detailimg {
+    width: 65%;
   }
 }

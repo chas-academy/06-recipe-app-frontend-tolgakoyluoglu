@@ -9,15 +9,19 @@ import { RecipeService } from '../recipe.service';
 export class RecipeResultComponent implements OnInit {
 
   searchInput = this.searchInput;
+  //healthLabel;
   recipes: any
+
+  $scope; getValue = this.healthLabel;
 
   constructor(private recipeService: RecipeService) { }
 
 
   handleRecipes = () => {
-    this.recipeService.getRecipes(this.searchInput).subscribe(data => {
+    this.recipeService.getRecipes(this.searchInput, this.healthLabel).subscribe(data => {
       this.recipes = data.hits.map(hit => hit.recipe)
       console.log(this.recipes)
+      console.log(this.searchInput)
     })
   }
 

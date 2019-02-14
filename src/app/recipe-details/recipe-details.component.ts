@@ -19,7 +19,7 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit() {
     this.service.getRecipe(this.route.snapshot.params['id']).subscribe(data => {
       this.recipe = data.hits.map(hit => hit.recipe)
-      console.log(data.hits[0]);
+      console.log(data.hits);
       console.log(this.recipe)
     });
   }
