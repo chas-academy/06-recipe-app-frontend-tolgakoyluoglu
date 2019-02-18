@@ -13,8 +13,6 @@ export class RecipeResultComponent implements OnInit {
   dietLabel;
   recipes: any
 
-  //$scope; getValue = this.healthLabel;
-
   constructor(private recipeService: RecipeService) { }
 
 
