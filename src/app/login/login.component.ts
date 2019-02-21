@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { TokenService } from '../token.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private http: HttpClient,
+    private service: UsersService,
     private token: TokenService,
     private router: Router,
     private auth: AuthService,
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   public error = null;
 
   onSubmit() {
-    return this.http.post('http://recipe.test/api/login', this.form).subscribe(
+    this.service.login(this.form).subscribe(
       data => this.handleResponse(data),
       err => this.handleError(err)
     )

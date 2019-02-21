@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; //Module for API requests
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
@@ -13,8 +12,6 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { SavedComponent } from './saved/saved.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { ResponsePasswordComponent } from './response-password/response-password.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
@@ -26,8 +23,6 @@ import { ProfileComponent } from './profile/profile.component';
     SavedComponent,
     LoginComponent,
     SignupComponent,
-    ResetPasswordComponent,
-    ResponsePasswordComponent,
     ProfileComponent
   ],
   imports: [

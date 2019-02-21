@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { TokenService } from '../token.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { UsersService } from '../users.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -11,16 +13,16 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   constructor(
-    private http: HttpClient,
+    private service: UsersService,
     private token: TokenService,
-    private router: Router
+    private router: Router,
+    private auth: AuthService,
   ) { }
 
   public form = {
     email: null,
     name: null,
     password: null,
-    passwordConfirmation: null
   }
 
   public error = [];
@@ -29,7 +31,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    return this.http.post('http://recipe.test/api/signup', this.form).subscribe(
+    this.service.signup(this.form).subscribe(
       data => this.handleResponse(data),
       err => this.handleError(err)
     )
@@ -37,6 +39,7 @@ export class SignupComponent implements OnInit {
 
   handleResponse(data) {
     this.token.handle(data.access_token);
+    this.auth.changeStatus(true);
     this.router.navigateByUrl('/profile');
   }
 

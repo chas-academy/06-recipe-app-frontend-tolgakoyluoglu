@@ -6,8 +6,6 @@ import { SavedComponent } from './saved/saved.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { ResponsePasswordComponent } from './response-password/response-password.component';
 import { BeforeLoginService } from './before-login.service';
 import { AfterLoginService } from './after-login.service';
 
@@ -15,8 +13,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
   { path: 'signup', component: SignupComponent, canActivate: [BeforeLoginService] },
   { path: 'profile', component: ProfileComponent, canActivate: [AfterLoginService] },
-  { path: 'reset-password', component: ResetPasswordComponent, canActivate: [AfterLoginService] },
-  { path: 'response-password', component: ResponsePasswordComponent, canActivate: [AfterLoginService] },
   { path: 'recipes', component: RecipeResultComponent },
   { path: 'recipes/detail/:id', component: RecipeDetailsComponent },
   { path: 'saved', component: SavedComponent },
