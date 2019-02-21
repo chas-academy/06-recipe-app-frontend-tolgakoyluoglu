@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
+import { TokenService } from './token.service';
 
 
 @Component({
@@ -13,11 +15,20 @@ export class AppComponent {
   public loggedIn: boolean;
 
   constructor(
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router,
+    private token: TokenService
   ) { }
 
   ngOnInit() {
     this.auth.authStatus.subscribe(value => this.loggedIn = value);
+  }
+
+  logout(event: MouseEvent) {
+    event.preventDefault();
+    this.token.remove();
+    this.auth.changeStatus(false);
+    this.router.navigateByUrl('/login');
   }
 
 }
