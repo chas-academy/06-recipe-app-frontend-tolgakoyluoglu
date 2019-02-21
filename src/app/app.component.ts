@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -9,5 +10,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Recipe App';
+  public loggedIn: boolean;
+
+  constructor(
+    private auth: AuthService
+  ) { }
+
+  ngOnInit() {
+    this.auth.authStatus.subscribe(value => this.loggedIn = value);
+  }
 
 }
