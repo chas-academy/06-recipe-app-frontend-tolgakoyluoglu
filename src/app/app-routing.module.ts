@@ -6,8 +6,8 @@ import { SavedComponent } from './saved/saved.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
-import { BeforeLoginService } from './before-login.service';
-import { AfterLoginService } from './after-login.service';
+import { BeforeLoginService } from './services/before-login.service';
+import { AfterLoginService } from './services/after-login.service';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
