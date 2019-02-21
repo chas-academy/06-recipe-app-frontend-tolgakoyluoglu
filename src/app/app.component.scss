@@ -1,12 +1,16 @@
 nav {
   padding: 10px;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: Georgia, serif;
   display: flex;
   justify-content: space-between;
   text-align: center;
   background-color: #62a5a1;
+
+  .navRight {
+    margin: 10px;
+  }
 
   .title {
     color: #fff;

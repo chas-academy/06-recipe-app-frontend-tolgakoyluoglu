@@ -13,6 +13,9 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { SavedComponent } from './saved/saved.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ResponsePasswordComponent } from './response-password/response-password.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SignupComponent } from './signup/signup.component';
     RecipesComponent,
     SavedComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ResetPasswordComponent,
+    ResponsePasswordComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

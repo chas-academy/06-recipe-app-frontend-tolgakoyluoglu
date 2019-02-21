@@ -1,8 +1,10 @@
 <div class="wrap">
-  <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput" placeholder="Search for recipe's.."
-    autocomplete="off">
+  <div class="search">
+    <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput" placeholder="Search for recipe's.."
+      autocomplete="off">
+    <button class="recipebtn" (click)="handleRecipes()">Get Recipe's</button>
+  </div>
 
-  <button class="recipebtn" (click)="handleRecipes()">Get Recipe's</button>
   <div class="meals">
     <ul>
       <h4 class="health">Allergies:</h4>
