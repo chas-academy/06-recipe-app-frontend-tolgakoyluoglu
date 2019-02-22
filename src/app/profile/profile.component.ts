@@ -15,22 +15,31 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   collection = [];
+  email: any;
 
   ngOnInit() {
     let email = this.token.getEmail()
     this.service.getSavedRecipes(email).subscribe(response => {
       response.data.forEach(e => {
-        if (e.email === email) this.collection.push(e)
+        if (e.email == email) this.collection.push(e)
       });
       console.log(this.collection);
     });
   }
 
-  deleteRecipe(email) {
-    email = this.token.getEmail();
-    this.service.deleteSavedRecipe(email).subscribe()
+  deleteRecipe(id) {
+    let recipe;
+    this.collection.forEach(e => {
+      if (e.id == id) recipe = e;
+    });
+    this.service.deleteSavedRecipe(recipe).subscribe(response => {
+      this.collection = [];
+      response.data.forEach(e => {
+        if (e.email == this.email) this.collection.push(e);
+      });
+    })
   }
 
 
-
 }
+

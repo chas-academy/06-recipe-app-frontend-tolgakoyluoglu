@@ -30,8 +30,8 @@ export class UsersService {
     return this.http.post(`${this.baseUrl}/save-recipe`, data);
   }
 
-  deleteSavedRecipe(email) {
-    return this.http.delete(`${this.baseUrl}/delete-recipe/${email}`, email);
+  deleteSavedRecipe(recipe) {
+    return this.http.post<any>(`${this.baseUrl}/delete-recipe`, recipe);
   }
 }
 
