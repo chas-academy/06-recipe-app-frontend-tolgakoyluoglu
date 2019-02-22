@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { RecipeService } from '../services/recipe.service';
+import { TokenService } from '../services/token.service';
+import { UsersService } from '../services/users.service';
+
 
 @Component({
   selector: 'app-recipe-details',
@@ -13,14 +16,14 @@ export class RecipeDetailsComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private service: RecipeService
+    private service: RecipeService,
+    private token: TokenService,
+    private userService: UsersService
   ) { }
 
   ngOnInit() {
     this.service.getRecipe(this.route.snapshot.params['id']).subscribe(data => {
       this.recipe = data.hits.map(hit => hit.recipe)
-      console.log(data.hits);
-      console.log(this.recipe)
     });
   }
 
@@ -28,8 +31,36 @@ export class RecipeDetailsComponent implements OnInit {
     this.router.navigate(['/recipes']);
   }
 
-  saveRecipe(recipeLabel: string) {
-    debugger;
+  saveRecipe() {
+    let dbModel = this.constructModel(this.recipe[0])
+    console.log(dbModel);
+    this.userService.sendRecipe(dbModel).subscribe(data => {
+      console.log(data)
+    })
+  }
+
+
+  arrayToString(array) {
+    let string = "";
+    array.forEach(e => {
+      string = string + e + ",";
+    });
+    return string;
+  }
+
+  constructModel(recipe) {
+    let dbModel = {
+
+      email: this.token.getEmail(),
+
+      label: recipe.label,
+      image: recipe.image,
+      calories: recipe.calories.toString(),
+      healthLabels: this.arrayToString(recipe.healthLabels),
+      ingredientLines: this.arrayToString(recipe.ingredientLines),
+    }
+
+    return dbModel;
   }
 
 }

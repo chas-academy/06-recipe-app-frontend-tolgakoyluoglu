@@ -28,12 +28,4 @@ export class RecipeService {
     return this.http.get(this.baseUrl + 'search?q=' + id + '&app_id=' + this.apiId + '&app_key=' + this.apiKey + '&from=0&to=1')//.pipe(
   }
 
-  saveRecipeToList(label: string) {
-
-  }
-
-  getSavedRecipes() {
-    return;
-  }
-
 }

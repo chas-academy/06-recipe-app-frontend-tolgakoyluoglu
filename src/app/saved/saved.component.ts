@@ -13,7 +13,7 @@ export class SavedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.recipeService
+
   }
 
 }
