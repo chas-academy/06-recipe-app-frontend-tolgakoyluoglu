@@ -14,11 +14,23 @@ export class ProfileComponent implements OnInit {
     private token: TokenService
   ) { }
 
+  collection = [];
+
   ngOnInit() {
     let email = this.token.getEmail()
-    this.service.getSavedRecipes(email).subscribe(data => {
-      console.log(data)
+    this.service.getSavedRecipes(email).subscribe(response => {
+      response.data.forEach(e => {
+        if (e.email === email) this.collection.push(e)
+      });
+      console.log(this.collection);
     });
   }
+
+  deleteRecipe(email) {
+    email = this.token.getEmail();
+    this.service.deleteSavedRecipe(email).subscribe()
+  }
+
+
 
 }

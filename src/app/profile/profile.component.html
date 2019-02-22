@@ -1,3 +1,10 @@
 <h3>
   Favorite Recipes:
 </h3>
+<div class="wrapper">
+  <div class="card" *ngFor="let recipe of collection">
+    <h3 class="cardtitle">{{recipe.label}}</h3>
+    <img src="{{recipe.image}}">
+    <button (click)="deleteRecipe()">HEJSAN</button>
+  </div>
+</div>

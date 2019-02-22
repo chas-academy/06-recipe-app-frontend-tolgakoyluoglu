@@ -23,11 +23,15 @@ export class UsersService {
 
   getSavedRecipes(email): Observable<any> {
     console.log(email);
-    return this.http.get(`${this.baseUrl}/recipe`);
+    return this.http.get(`${this.baseUrl}/recipe/${email}`);
   }
 
   sendRecipe(data) {
     return this.http.post(`${this.baseUrl}/save-recipe`, data);
+  }
+
+  deleteSavedRecipe(email) {
+    return this.http.delete(`${this.baseUrl}/delete-recipe/${email}`, email);
   }
 }
 
