@@ -18,8 +18,12 @@ export class ProfileComponent implements OnInit {
   email: any;
 
   ngOnInit() {
+    this.getRecipes();
+  }
+
+  getRecipes() {
     let email = this.token.getEmail()
-    this.service.getSavedRecipes(email).subscribe(response => {
+    this.service.getSavedRecipes().subscribe(response => {
       response.data.forEach(e => {
         if (e.email == email) this.collection.push(e)
       });
@@ -37,6 +41,7 @@ export class ProfileComponent implements OnInit {
       response.data.forEach(e => {
         if (e.email == this.email) this.collection.push(e);
       });
+      this.getRecipes();
     })
   }
 

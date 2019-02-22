@@ -21,9 +21,9 @@ export class UsersService {
     return this.http.post(`${this.baseUrl}/signup`, data)
   }
 
-  getSavedRecipes(email): Observable<any> {
-    console.log(email);
-    return this.http.get(`${this.baseUrl}/recipe/${email}`);
+  getSavedRecipes(): Observable<any> {
+    // console.log(email);
+    return this.http.get(`${this.baseUrl}/recipe`);
   }
 
   sendRecipe(data) {

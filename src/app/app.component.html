@@ -5,7 +5,7 @@
     <div class="navRight">
       <a class="menu" routerLink="profile" *ngIf=loggedIn>My Recipes</a>
       <a class="menu" routerLink="login" *ngIf=!loggedIn>Login</a>
-      <a class="menu" href="#" (click)="logout($event)" *ngIf=loggedIn>Logout</a>
+      <a class="menu" href="" (click)="logout($event)" *ngIf=loggedIn>Logout</a>
     </div>
   </nav>
   <router-outlet></router-outlet>
