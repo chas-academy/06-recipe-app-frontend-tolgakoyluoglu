@@ -8,20 +8,20 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipeResultComponent } from './recipe-result/recipe-result.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
-import { RecipesComponent } from './recipes/recipes.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeResultComponent,
     RecipeDetailsComponent,
-    RecipesComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

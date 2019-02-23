@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
   { path: 'register', component: SignupComponent, canActivate: [BeforeLoginService] },
   { path: 'profile', component: ProfileComponent, canActivate: [AfterLoginService] },
+  { path: 'profile/detail/:id', component: RecipeDetailsComponent },
+  { path: 'profile/edit/:id', component: RecipeEditComponent, canActivate: [AfterLoginService] }
 ];
 
 @NgModule({

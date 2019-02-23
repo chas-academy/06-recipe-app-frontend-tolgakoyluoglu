@@ -1,14 +1,38 @@
 .wrap {
-  font-family: Georgia, serif;
-  margin: 0;
-  padding: 0;
   font-size: 18px;
-  padding: 15px;
+  padding-top: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/search.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  border-bottom: 2px solid #426e6b;
+
+  .text {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    font-size: 1.6rem;
+
+    h1 {
+      color: white;
+      margin-top: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+      margin: 0;
+    }
+  }
 
   .search {
     display: flex;
-    width: 25%;
+    width: 60%;
     margin: auto;
+    margin-top: 20px;
   }
 
   .meals {
@@ -17,6 +41,7 @@
     margin: 30px;
     width: 70%;
     margin: auto;
+    margin-top: 40px;
 
     ul {
       list-style: none;
@@ -28,6 +53,9 @@
       .health {
         padding-bottom: 10px;
         text-decoration: underline;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
       }
     }
 
@@ -51,6 +79,8 @@
     flex-wrap: wrap;
     width: 85%;
     margin: auto;
+    margin-top: 60px;
+    padding-bottom: 70px;
   }
 
   .card {
@@ -58,6 +88,10 @@
     margin-top: 40px;
     flex: 0 19%;
     border-style: double;
+    border: 1px solid #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
 
     img {
       width: 100%;
@@ -84,29 +118,85 @@
   }
 
   .form-control {
-    width: 200px;
+    width: 80%;
     height: 45px;
     font-size: 1.8rem;
-    padding-left: 0.5rem;
     border: 0.5px solid #62a5a1;
     background-size: 0 100%;
-    margin: auto;
   }
 
   .recipebtn {
     padding: 10px 30px;
     cursor: pointer;
-    border-radius: 1px;
     background-color: #62a5a1;
     font-size: 16px;
     border: none;
     color: #ffff;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 4px;
   }
 
   .recipebtn:hover {
     background-color: #426e6b;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrap {
+    width: 100%;
+    height: 450px;
+
+    .text {
+      width: 95%;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .search {
+      width: 95%;
+
+      .recipebtn {
+        padding: 0px;
+        font-size: 15px;
+      }
+    }
+
+    .meals {
+      width: 100%;
+      justify-content: start;
+
+      .healthlabels {
+        width: 100px;
+      }
+    }
+
+    .wrapper {
+      width: 95%;
+      margin-top: 75px;
+      padding-bottom: 30px;
+
+      .card {
+        flex: 0 100%;
+        margin-top: 45px;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+  .wrap {
+    height: 450px;
+
+    .recipebtn {
+      padding: 0px 20px;
+    }
+
+    .card {
+      flex: 0 32%;
+    }
   }
 }

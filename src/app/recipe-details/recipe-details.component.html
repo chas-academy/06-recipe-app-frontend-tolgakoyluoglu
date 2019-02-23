@@ -1,6 +1,4 @@
 <div class="detailwrap">
-  <h2>Recipe Details</h2>
-  <button class="recipebtn" (click)="goToRecipes()">Go Back</button>
   <div class="carddetail" *ngIf="recipe">
     <h3 class="cardtitle">{{recipe[0].label}}</h3>
     <img class="detailimg" alt="Image of {{recipe[0].label}}" src="{{recipe[0].image}}">
@@ -13,7 +11,7 @@
       <p><span>{{recipe[0].healthLabels}}</span></p>
 
       <button class="add" (click)="saveRecipe()">Add To Favorites</button>
-      <button class="share">Share With Friends</button>
+      <button class="add" (click)="goToRecipes()">Go Back</button>
     </div>
   </div>
 </div>

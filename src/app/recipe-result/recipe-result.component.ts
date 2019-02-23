@@ -9,6 +9,7 @@ import { RecipeService } from '../services/recipe.service';
 export class RecipeResultComponent implements OnInit {
 
   searchInput = this.searchInput;
+  search;
   healthLabel;
   dietLabel;
   recipes: any
@@ -25,6 +26,10 @@ export class RecipeResultComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.recipeService.getRecipes(this.search, this.healthLabel, this.dietLabel).subscribe(data => {
+      this.recipes = data.hits.map(hit => hit.recipe)
+    })
   }
+
 
 }

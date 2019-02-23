@@ -1,14 +1,11 @@
-<h1>My Saved Recipes</h1>
+<h1 class="title">Saved Recipes</h1>
+<p>Here you can view and edit all your favorite recepies.</p>
 
-<div class="p-1">
-  <div class="row d-inline-block" style="border-radius:5px; width:100wv;" *ngFor="let recipe of collection">
-    <div class="card m-3 ml-5" style="width: 16rem;" *ngIf="recipe">
-      <img src="{{recipe.image}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{recipe.label}}</h5>
-        <p class="card-text"></p>
-        <button href="#" (click)="deleteRecipe(recipe.id)" class="btn btn-danger">Delete Recipe</button>
-      </div>
-    </div>
+<div class="wrapper">
+  <div class="card" *ngFor="let recipe of collection">
+    <h3 class="cardtitle">{{recipe.label}}</h3>
+    <img src="{{recipe.image}}">
+    <button routerLink="edit/{{recipe.id}}" class="btn btn-warning">Edit</button>
+    <button href="#" (click)="deleteRecipe(recipe.id)" class="btn btn-danger">Delete</button>
+    <button routerLink="detail/{{recipe.label}}" routerLinkActive="active" class="btn btn-success">Details</button>
   </div>
-</div>

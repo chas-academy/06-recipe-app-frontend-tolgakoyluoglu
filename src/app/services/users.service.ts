@@ -22,7 +22,6 @@ export class UsersService {
   }
 
   getSavedRecipes(): Observable<any> {
-    // console.log(email);
     return this.http.get(`${this.baseUrl}/recipe`);
   }
 

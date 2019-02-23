@@ -1,4 +1,9 @@
 <div class="wrap">
+  <div class="text">
+    <h1>Welcome to Recipe App!</h1>
+    <p>Search for recipes below. Include allergies or diet if needed.</p>
+    <p>Register a new account and you will be able to save all your favorite recipes to your own list!</p>
+  </div>
   <form (ngSubmit)="handleRecipes()">
     <div class="search">
       <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput" placeholder="Search for recipes.."
@@ -10,6 +15,7 @@
     <ul>
       <h4 class="health">Allergies:</h4>
       <select class="healthlabels" [(ngModel)]="healthLabel">
+        <option value=""></option>
         <option value="alcohol-free">Alcohol-Free</option>
         <option value="celery-free">Celery-Free</option>
         <option value="crustacean-free">Crustacean-Free</option>
@@ -24,6 +30,7 @@
     <ul>
       <h4 class="health">Diet:</h4>
       <select class="healthlabels" [(ngModel)]="dietLabel">
+        <option value=""></option>
         <option value="balanced">Balanced</option>
         <option value="high-fiber">High Fiber</option>
         <option value="high-protein">High Protein</option>
