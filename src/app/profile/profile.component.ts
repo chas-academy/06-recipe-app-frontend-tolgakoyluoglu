@@ -11,11 +11,13 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private service: UsersService,
-    private token: TokenService
+    private token: TokenService,
+    private userService: UsersService
   ) { }
 
   collection = [];
   email: any;
+  id;
 
   ngOnInit() {
     this.getRecipes();
@@ -43,6 +45,23 @@ export class ProfileComponent implements OnInit {
       });
       this.getRecipes();
     })
+  }
+
+  editRecipe(data) {
+    let dbModel = this.constructModel(data)
+    console.log(dbModel);
+    this.userService.sendUpdatedRecipe(dbModel).subscribe(data => {
+    })
+  }
+
+  constructModel(data) {
+    let dbModel = {
+      id: data.id,
+      email: this.token.getEmail(),
+      label: data.label
+    }
+    
+    return dbModel;
   }
 
 

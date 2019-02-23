@@ -29,6 +29,10 @@ export class UsersService {
     return this.http.post(`${this.baseUrl}/save-recipe`, data);
   }
 
+  sendUpdatedRecipe(data) {
+    return this.http.put(`${this.baseUrl}/update-recipe`, data);
+  }
+
   deleteSavedRecipe(recipe) {
     return this.http.post<any>(`${this.baseUrl}/delete-recipe`, recipe);
   }
