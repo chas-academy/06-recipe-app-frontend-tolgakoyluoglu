@@ -29,7 +29,6 @@ export class ProfileComponent implements OnInit {
       response.data.forEach(e => {
         if (e.email == email) this.collection.push(e)
       });
-      console.log(this.collection);
     });
   }
 
@@ -49,7 +48,6 @@ export class ProfileComponent implements OnInit {
 
   editRecipe(data) {
     let dbModel = this.constructModel(data)
-    console.log(dbModel);
     this.userService.sendUpdatedRecipe(dbModel).subscribe(data => {
     })
   }
@@ -60,7 +58,7 @@ export class ProfileComponent implements OnInit {
       email: this.token.getEmail(),
       label: data.label
     }
-    
+
     return dbModel;
   }
 

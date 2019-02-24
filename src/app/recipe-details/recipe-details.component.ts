@@ -7,7 +7,7 @@ import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-recipe-details',
-  templateUrl: '/recipe-details.component.html',
+  templateUrl: './recipe-details.component.html',
   styleUrls: ['./recipe-details.component.scss']
 })
 export class RecipeDetailsComponent implements OnInit {
@@ -33,9 +33,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   saveRecipe() {
     let dbModel = this.constructModel(this.recipe[0])
-    console.log(dbModel);
     this.userService.sendRecipe(dbModel).subscribe(data => {
-      console.log(data)
     })
   }
 

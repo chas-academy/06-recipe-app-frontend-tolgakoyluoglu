@@ -1,4 +1,6 @@
 # Recept
+Site deployed at: http://recipe.tolgakoyluoglu.chas.academy/
+Backend: http://api.tolgakoyluoglu.chas.academy/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 

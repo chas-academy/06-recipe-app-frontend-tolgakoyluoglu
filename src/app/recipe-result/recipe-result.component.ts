@@ -20,8 +20,6 @@ export class RecipeResultComponent implements OnInit {
   handleRecipes = () => {
     this.recipeService.getRecipes(this.searchInput, this.healthLabel, this.dietLabel).subscribe(data => {
       this.recipes = data.hits.map(hit => hit.recipe)
-      console.log(this.recipes)
-      console.log(this.searchInput)
     })
   }
 

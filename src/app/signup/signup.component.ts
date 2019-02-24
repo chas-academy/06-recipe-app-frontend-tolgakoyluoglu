@@ -38,7 +38,6 @@ export class SignupComponent implements OnInit {
   }
 
   handleResponse(data) {
-    console.log(data);
     this.token.handle(data.access_token, data.user.email);
     this.auth.changeStatus(true);
     this.router.navigateByUrl('/profile');
