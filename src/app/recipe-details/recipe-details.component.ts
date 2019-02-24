@@ -28,7 +28,7 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
   goToRecipes() {
-    this.router.navigate(['/recipes']);
+    this.router.navigate(['']);
   }
 
   saveRecipe() {

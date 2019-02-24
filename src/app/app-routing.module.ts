@@ -8,9 +8,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { BeforeLoginService } from './services/before-login.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'recipes', pathMatch: 'full' },
-  { path: 'recipes', component: RecipeResultComponent },
-  { path: 'recipes/detail/:id', component: RecipeDetailsComponent },
+  //{ path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', component: RecipeResultComponent },
+  { path: 'detail/:id', component: RecipeDetailsComponent },
   { path: 'login', component: LoginComponent, canActivate: [BeforeLoginService] },
   { path: 'register', component: SignupComponent, canActivate: [BeforeLoginService] },
   { path: 'profile', component: ProfileComponent },
