@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
-  baseUrl = 'http://api.tolgakoyluoglu.chas.academy/api'
+  baseUrl = 'http://recipe.test/api'
 
   constructor(
     private http: HttpClient,

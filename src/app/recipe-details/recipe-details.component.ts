@@ -12,6 +12,7 @@ import { UsersService } from '../services/users.service';
 })
 export class RecipeDetailsComponent implements OnInit {
   recipe: any
+  clicked = false;
 
   constructor(
     private router: Router,
@@ -32,6 +33,8 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
   saveRecipe() {
+    console.log('hej')
+    this.clicked = false;
     let dbModel = this.constructModel(this.recipe[0])
     this.userService.sendRecipe(dbModel).subscribe(data => {
     })

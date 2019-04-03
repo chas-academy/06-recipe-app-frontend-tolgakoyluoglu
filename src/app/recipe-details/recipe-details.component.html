@@ -10,8 +10,9 @@
       <p>Health Labels:</p>
       <p><span>{{recipe[0].healthLabels}}</span></p>
 
-      <button class="add" (click)="saveRecipe()">Add To Favorites</button>
-      <button class="add" (click)="goToRecipes()">Go Back</button>
+      <button class="add" [disabled]="clicked" (click)="saveRecipe(); clicked = true;">Add To
+        Favorites</button>
+      <button class="add" (click)="goToRecipes()">Go Backaaaa</button>
     </div>
   </div>
 </div>
