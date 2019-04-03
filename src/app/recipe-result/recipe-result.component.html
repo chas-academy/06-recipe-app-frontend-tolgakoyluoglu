@@ -6,40 +6,23 @@
   </div>
   <form (ngSubmit)="handleRecipes()">
     <div class="search">
-      <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput" placeholder="Search for recipes.."
-        autocomplete="off">
+      <input type="text" class="form-control" name="searchInput" [(ngModel)]="searchInput"
+        placeholder="Search for recipes.." autocomplete="off">
       <button type="submit" class="recipebtn">Get Recipes</button>
     </div>
   </form>
   <div class="meals">
     <ul>
-      <h4 class="health">Allergies:</h4>
+      <h4 class="health">Options:</h4>
       <select class="healthlabels" [(ngModel)]="healthLabel">
-        <option value=""></option>
-        <option value="alcohol-free">Alcohol-Free</option>
-        <option value="celery-free">Celery-Free</option>
-        <option value="crustacean-free">Crustacean-Free</option>
-        <option value="dairy-free">Dairy-Free</option>
-        <option value="egg-free">Egg-Free</option>
-        <option value="fish-free">Fish-Free</option>
-        <option value="gluten-free">Gluten</option>
-        <option value="vegan">Vegan</option>
-        <option value="vegetarian">Vegetarian</option>
-      </select>
-    </ul>
-    <ul>
-      <h4 class="health">Diet:</h4>
-      <select class="healthlabels" [(ngModel)]="dietLabel">
-        <option value=""></option>
-        <option value="balanced">Balanced</option>
-        <option value="high-fiber">High Fiber</option>
-        <option value="high-protein">High Protein</option>
-        <option value="low-carb">Low Carb</option>
-        <option value="low-fat">Low Fat</option>
-        <option value="low-sodium">Low Sodium</option>
+        <option value="&health=alcohol-free">Alcohol-Free</option>
+        <option value="&health=tree-nut-free">Tree Nut Free</option>
+        <option value="&health=peanut-free">Peanut Free</option>
+        <option value="&health=vegetarian">Vegetarian</option>
       </select>
     </ul>
   </div>
+
 
   <div class="wrapper">
     <div class="card" *ngFor="let recipe of recipes">
